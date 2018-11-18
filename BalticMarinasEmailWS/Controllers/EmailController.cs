@@ -7,7 +7,7 @@ namespace BalticMarinasEmailWS.Controllers
     [ApiController]
     public class EmailController : ControllerBase
     {
-        // GET api/event/5
+        // GET api/email/
         [HttpGet("{emailBody}/{receiver}")]
         public void Send(string emailBody, string receiver)
         {
