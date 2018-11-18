@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using BalticMarinasEmailWS.Utilities;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BalticMarinasEmailWS.Controllers
 {
@@ -7,11 +8,10 @@ namespace BalticMarinasEmailWS.Controllers
     public class EmailController : ControllerBase
     {
         // GET api/event/5
-        [HttpGet("{id}")]
-        public void Send(int id)
+        [HttpGet("{emailBody}/{receiver}")]
+        public void Send(string emailBody, string receiver)
         {
-            //EventsContext context = HttpContext.RequestServices.GetService(typeof(BalticMarinasEventsWS.Models.EventsContext)) as EventsContext;
-            //context.DeleteEventById(id);
+            Email.sendEmail(emailBody, receiver);
         }
     }
 }
