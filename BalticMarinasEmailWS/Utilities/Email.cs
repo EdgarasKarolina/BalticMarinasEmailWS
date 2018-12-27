@@ -14,7 +14,7 @@ namespace BalticMarinasEmailWS.Utilities
 
                 mail.From = new MailAddress("attendancesystemkea@gmail.com");
                 mail.To.Add(receiver);
-                mail.Subject = "Test Mail";
+                mail.Subject = "Baltic Marinas";
                 mail.Body = emailBody;
 
                 SmtpServer.Port = 587;
